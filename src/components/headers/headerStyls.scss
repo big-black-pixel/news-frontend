@@ -1,0 +1,84 @@
+.headerss{
+  display: flex;
+  justify-content: center ;
+
+  height: 50px ;
+  margin-top: 38px;
+  min-width: 0; 
+  font-family: 'Inter', sans-serif;
+
+  .logo{
+    height: 50px;
+    width: 181px;
+  }
+
+  .buttonsMat{
+    display: flex;
+    min-width: 0; 
+
+      .buttons{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid #ffffff;
+      height: 48px;
+      width: 148px;
+      border-radius: 4px;
+      margin-left:27px;
+      p{
+        color: #ffffff;
+        font-size: 20px;
+      }
+
+      img{
+        margin-left:14px;
+        height:14px; 
+        width:14px;
+      }
+    }
+  }
+}
+  
+.inputClass{
+  display: flex;
+  border-radius: 4px;
+  margin-left: 90px; 
+
+  input{
+    height:45.5px; 
+    width:458px;
+    margin-top: 1px;
+    border: none;
+    outline: 1px solid #ffffff;
+    border-radius: 4px 0 0 4px;
+    background: transparent;
+    color: #ffffff !important;
+    padding-left: 10px; 
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; 
+    opacity: 1;
+
+    &::placeholder {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .daughterInput{
+    height:48px; 
+    width:43px;
+    border: 1px solid #ffffff;
+    border-radius: 0 4px 4px 0;
+
+    img{
+      display: flex;
+      margin: 18px auto;
+      height:14px; 
+      width:14px;
+    }
+  }
+
+  
+}
+  
+ 
