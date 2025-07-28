@@ -27,7 +27,9 @@ function CardAitoms() {
                                     <p>{articles.title}</p>
                                 </li>
                                 <li>
-                                    <button>подробнее</button>
+                                    <a href={articles.url} target="blank" rel="ferrer">
+                                        <button>Подробнее</button>
+                                    </a>
                                     <img src="img/liks.svg" alt="liks" />
                                 </li>
                             </ul>
