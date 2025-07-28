@@ -7,7 +7,6 @@ export const useNews = create((set)=> ({
     newsMas: [],
     loading: false,
     errorStatus: null ,
-    isLoading: false,
     setNewsMas: async () => {
         try {
             set({loading: true, errorStatus: null})
@@ -29,8 +28,10 @@ export const useNews = create((set)=> ({
             alert('Error getNews')
         }
     },
+    inputStatus: '',
+    setInputStatus: (col)=> {
+        set({inputStatus: col})
+    },
 
-    setIsLoading: set(() => (newsMas.lenght == 0 ? {isLoading:true }: {isLoading:false}))
-    
 }))
 

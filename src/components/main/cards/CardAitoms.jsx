@@ -1,25 +1,24 @@
 import { useEffect } from 'react';
 import { useNews } from '../../../API/APImenedjer';
-import { useInputStatus } from '../../../hooks/DefaulHooks'; 
 
 import './cardAitomsStyls.scss'
 
 function CardAitoms() {
+    const { newsMas, errorStatus, setNewsMas ,inputStatus} = useNews();
+    console.log(inputStatus)
 
-    const { newsMas, loading, errorStatus, setNewsMas } = useNews();
-    const {inputStatus} = useInputStatus()
     const filteredNews = newsMas.filter(filt => {
-        return filt.articles.source.name.toLowerCase().includes(inputStatus.toLowerCase())
+        return filt.source?.name?.toLowerCase().includes(inputStatus.toLowerCase())
     })
 
-    useEffect(() => { setNewsMas() }, [...Array(9)])
-    if (loading) { console.log(loading) }
+    useEffect(() => { setNewsMas() }, [])
     if (errorStatus) { return errorStatus }
-    
+
+    const dataToRender = filteredNews.length > 0 ? filteredNews : newsMas || [];
     
     return (
         <section>
-            {filteredNews.map((articles, index) => {
+            {dataToRender.map((articles, index) => {
                     return (
                         <article key={index} >
                             <ul>

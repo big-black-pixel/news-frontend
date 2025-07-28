@@ -1,17 +1,19 @@
-import { useInputStatus } from '../../hooks/DefaulHooks'; 
+import { useNews } from '../../API/APImenedjer';
 
 import './headerStyls.scss'
 
 function Header(){
-  const {inputStatus, changeInputStatus} = useInputStatus()
-  
+  const {inputStatus, setInputStatus } = useNews()
+  const handleChange = (e) => {
+    setInputStatus(e.target.value); 
+  };
   return (
     <header className="headerss">
       <div className="logo">
           <img src="img/logo.svg" alt="logo"/>
       </div>
       <div className="inputClass" >
-        <input type="text" value={inputStatus} onChange={changeInputStatus} placeholder="Поиск" />
+        <input type="text" value={inputStatus} onChange={handleChange} placeholder="Поиск" />
         <div className="daughterInput"><img src="img/magnifying glass.svg" alt="Magnifying-glass"/></div>
       </div>
       <div className="buttonsMat">
