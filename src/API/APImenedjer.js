@@ -3,7 +3,7 @@ import { create } from 'zustand'
 
 
 
-export const useNews = create((set)=> ({
+export const useNews = create((set,get)=> ({
     newsMas: [],
     loading: false,
     errorStatus: null ,
@@ -32,6 +32,8 @@ export const useNews = create((set)=> ({
     setInputStatus: (col)=> {
         set({inputStatus: col})
     },
+    statusSecondHeader:'Новости',
+    setSecondHeader: (col)=> set({statusSecondHeader: col}),
 
 }))
 

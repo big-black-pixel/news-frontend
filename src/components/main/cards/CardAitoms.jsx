@@ -5,7 +5,6 @@ import './cardAitomsStyls.scss'
 
 function CardAitoms() {
     const { newsMas, errorStatus, setNewsMas ,inputStatus} = useNews();
-    console.log(inputStatus)
 
     const filteredNews = newsMas.filter(filt => {
         return filt.source?.name?.toLowerCase().includes(inputStatus.toLowerCase())

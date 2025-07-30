@@ -16,6 +16,14 @@
     display: flex;
     min-width: 0; 
 
+    nav{
+      transition: all 0.1s ease;
+      &:active {
+        background: #ADFF00;
+        color: #fff;
+      }
+    }
+
       .buttons{
       display: flex;
       align-items: center;
@@ -25,6 +33,7 @@
       width: 148px;
       border-radius: 4px;
       margin-left:27px;
+
       p{
         color: #ffffff;
         font-size: 20px;
@@ -43,11 +52,12 @@
   display: flex;
   border-radius: 4px;
   margin-left: 90px; 
+  align-items: center;
 
   input{
-    height:45.5px; 
+    height:45px; 
     width:458px;
-    margin-top: 1px;
+   
     border: none;
     outline: 1px solid #ffffff;
     border-radius: 4px 0 0 4px;
@@ -65,10 +75,12 @@
   }
 
   .daughterInput{
-    height:48px; 
+    height:47px; 
     width:43px;
+  
     border: 1px solid #ffffff;
     border-radius: 0 4px 4px 0;
+    
 
     img{
       display: flex;
