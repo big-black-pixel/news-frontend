@@ -4,7 +4,7 @@ import { useNews } from '../../../API/APImenedjer';
 import './cardAitomsStyls.scss'
 
 function CardAitoms() {
-    const { newsMas, errorStatus, setNewsMas ,inputStatus,setData} = useNews();
+    const { newsMas, errorStatus, setNewsMas ,inputStatus} = useNews();
 
     const filteredNews = newsMas.filter(filt => {
         return filt.source?.name?.toLowerCase().includes(inputStatus.toLowerCase())
@@ -17,9 +17,9 @@ function CardAitoms() {
     
     return (
         <section>
-            {dataToRender.map((articles, index) => {
+            {dataToRender.map((articles) => {
                     return (
-                        <article key={index} >
+                        <article key={articles.title.toLowerCase()} >
                             <ul>
                                 <li><h3>{articles.source?.name}</h3></li>
                                 <li>

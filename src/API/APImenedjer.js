@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { create } from 'zustand'
-import data from './data.json'
+
 
 
 
@@ -38,23 +38,8 @@ export const useNews = create((set,get)=> ({
 
     newsPopuliriti: true,
 
-    liksStatu: true,
-
-    dataStatus: data.articles, // Используем сразу массив articles
-  
-  // Добавление в избранное
-  addToFavorites: (article) => {
-    set((state) => ({
-      dataStatus: [...state.dataStatus, article]
-    }))
-  },
-  
-  // Удаление из избранного
-  removeFromFavorites: (url) => {
-    set((state) => ({
-      dataStatus: state.dataStatus.filter(item => item.url !== url)
-    }))
-  }
+    favorites:[],
+    
 
 }))
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import './likesStyls.scss'
-import data from '../../../API/data.json'
+
 
 function Likes() {
   return (
     <div className='like'>
-      <section>
+      {/* <section>
         {data.articles.map((articles, index) => {
           return (
             <article key={index} >
@@ -24,7 +24,7 @@ function Likes() {
             </article>
           )
         })}
-      </section>
+      </section> */}
     </div>
   )
 }
