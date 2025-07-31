@@ -4,7 +4,7 @@ import { useNews } from '../../../API/APImenedjer';
 import './cardAitomsStyls.scss'
 
 function CardAitoms() {
-    const { newsMas, errorStatus, setNewsMas ,inputStatus} = useNews();
+    const { newsMas, errorStatus, setNewsMas ,inputStatus,setData} = useNews();
 
     const filteredNews = newsMas.filter(filt => {
         return filt.source?.name?.toLowerCase().includes(inputStatus.toLowerCase())
