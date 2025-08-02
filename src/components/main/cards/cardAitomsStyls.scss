@@ -53,10 +53,19 @@ section{
                     line-height: 20px;
                     text-transform: uppercase;
                     border: none;
+                    cursor: pointer;
 
                 }
                 img{
                     margin: 20px 0 0 6px ;
+                    cursor: pointer;
+
+                    background-size: cover;
+                    transition: background-image 0.3s ease;
+
+                    &:active {
+                        background-image: url('../../../../public/img/liks-acktiv.svg');
+                    }
                 }
             }
         }
