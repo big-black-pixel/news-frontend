@@ -4,7 +4,7 @@ import { create } from 'zustand'
 
 
 
-export const useNews = create((set,get)=> ({
+export const useNews = create((set)=> ({
     newsMas: [],
     loading: false,
     errorStatus: null ,
@@ -17,7 +17,7 @@ export const useNews = create((set,get)=> ({
                         q: 'tesla AND (US OR America)',
                         sortBy: 'publishedAt',
                         language: 'en',
-                        pageSize: 12,
+                        pageSize: 19,
                         apiKey: '1c4c3b8a0a5f4add894e604d79aa7225'
                     }
                 }

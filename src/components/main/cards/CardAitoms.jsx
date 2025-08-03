@@ -4,18 +4,22 @@ import { useNews } from '../../../API/APImenedjer';
 import './cardAitomsStyls.scss'
 
 function CardAitoms() {
-    const { newsMas, errorStatus, setNewsMas ,inputStatus, addToFavorites} = useNews();
+    const { newsMas, errorStatus, setNewsMas, inputStatus, addToFavorites, favorites} = useNews();
 
     const filteredNews = newsMas.filter(filt => {
-        return filt.source?.name?.toLowerCase().includes(inputStatus.toLowerCase())
-    })
+        const searchTerm = inputStatus.toLowerCase();
+        return (
+          filt.title?.toLowerCase().includes(searchTerm) ||
+          filt.source?.name?.toLowerCase().includes(searchTerm)
+        );
+      });
 
     useEffect(() => { setNewsMas() }, [])
     if (errorStatus) { return errorStatus }
 
     const dataToRender = filteredNews.length > 0 ? filteredNews : newsMas || [];
     const handleAddFavorite = (articles) => {
-        // Отправляем весь объект статьи, а не только title
+        
         addToFavorites({
             title: articles.title,
             source: articles.source,
@@ -23,10 +27,16 @@ function CardAitoms() {
             publishedAt: articles.publishedAt,
         });
     };
+    const isFavorite = (article) => {
+        return favorites.some(fav => 
+            fav.url === article.url
+        );
+    };
     
     return (
         <section>
             {dataToRender.map((articles) => {
+                const favorite = isFavorite(articles);
                     return (
                         <article key={articles.url} >
                             <ul>
@@ -38,7 +48,8 @@ function CardAitoms() {
                                     <a href={articles.url} target="blank" rel="ferrer">
                                         <button>Подробнее</button>
                                     </a>
-                                    <img src="img/liks.svg" onClick={() => handleAddFavorite(articles)} alt="liks" />
+                                    <img src={(favorite ? "img/liks-acktiv.svg" : "img/liks.svg")} 
+                                    onClick={() => handleAddFavorite(articles)} alt="liks" />
                                 </li>
                             </ul>
                         </article>

@@ -7,7 +7,7 @@ function Categories() {
   const {setSecondHeader} = useNews()
   return (
     <div className='categories'>
-      <ul>
+      <ul className='galvca'>
 
         <Link to = "/">
           <li onClick={() => setSecondHeader('технологии',false)}>
@@ -45,6 +45,30 @@ function Categories() {
             <h3>развлечения</h3>
             <img src="/img/entertainment.png" alt="развлечения" />
           </li>
+        </Link>
+      </ul>
+
+      <ul className='kategor'>
+      <Link to = "/">
+          <li onClick={() => setSecondHeader('технологии',false)}> <p>технологии</p> </li>
+        </Link>
+
+        <Link to = "/">
+          <li onClick={() => setSecondHeader('бизнес',false)}> <p>бизнес</p> </li>
+        </Link>
+        
+        <Link to = "/">
+          <li onClick={() => setSecondHeader('спорт',false)}> <p>спорт</p> </li>
+        </Link>
+
+        <Link to = "/">
+          <li onClick={() => setSecondHeader('наука',false)}> <p>наука</p> </li>
+        </Link>
+        <Link to = "/">
+          <li onClick={() => setSecondHeader('здоровье',false)}> <p>здоровье</p> </li>
+        </Link>
+        <Link to = "/">
+          <li onClick={() => setSecondHeader('развлечения',false)}> <p>развлечения</p> </li>
         </Link>
       </ul>
     </div>

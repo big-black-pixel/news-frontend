@@ -1,14 +1,13 @@
-
-main{
+main {
     margin: 0 auto;
     background-color: #ffffff;
     height: auto;
     width: 1140px;
-    border-radius: 90px 90px 90px 90px ;
+    border-radius: 90px 90px 90px 90px;
     padding: 0 0 10px 0;
     padding-top: 10px;
 
-    .title{
+    .title {
         display: flex;
         justify-content: center;
         font-family: Inter, sans-serif;
@@ -17,10 +16,27 @@ main{
         line-height: 20px;
         text-transform: uppercase;
         padding-top: 67px;
-        span{
+
+        span {
             color: #0039C7;
         }
 
     }
-    
+
+}
+
+
+@media (max-width:375px) {
+    main {
+        background-color: #ffffff;
+        height: auto ;
+        width: 316px;
+        border-radius: 40px 40px 40px 40px;
+        
+
+        .title {
+            display: none;
+        }
+
+    }
 }

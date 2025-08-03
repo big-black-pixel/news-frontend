@@ -1,7 +1,6 @@
 .headerss{
   display: flex;
   justify-content: center ;
-
   height: 50px ;
   margin-top: 38px;
   min-width: 0; 
@@ -10,6 +9,9 @@
   .logo{
     height: 50px;
     width: 181px;
+  }
+  .navig{
+    display: none;
   }
 
   .buttonsMat{
@@ -92,5 +94,127 @@
 
   
 }
+
+@media (min-width: 376px) {
+  .perexod{
+    display: none;
+  }
+  .daughterInput{
+    height:27px; 
+    width:34px;
+    border: 1px solid #ffffff;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+
+    img{
+      display: flex;
+      margin: 7px auto;
+      height:13px; 
+      width:13px;
+    }
+  }
+}
   
- 
+@media (max-width:375px) {
+  .carr{
+    display: none;
+  }
+  .inputClass{
+    margin-left: 18px; 
+    .hswlinput{
+      width:100px;
+      height:25px;
+      font-size: 11px;  
+    }
+    .disepNone{
+      display: none;
+    }
+    .daughterInput2{
+      height:27px; 
+      width:34px;
+      border: 1px solid #ffffff;
+      border-radius: 4px 4px 4px 4px;
+      margin: 0 0 0 110px ;
+      cursor: pointer;
+      img{
+        display: flex;
+        margin: 7px auto;
+        height:13px; 
+        width:13px;
+      }
+    }
+    .daughterInput{
+      height:27px; 
+      width:34px;
+      border: 1px solid #ffffff;
+      border-radius: 0px 4px 4px 0px;
+      cursor: pointer;
+  
+      img{
+        display: flex;
+        margin: 7px auto;
+        height:13px; 
+        width:13px;
+      }
+    }
+  }
+
+  .headerss{
+    height: 30px ;
+    margin-top: 55px;
+      .buttonsMat{
+        display: none;
+      }
+      .navig{
+        display: block;
+        margin: -29px 0px 0 170px ;
+        height: 29px;
+      }
+
+    .logo{
+      width: 110px;
+      height: 26;
+      img{
+        width: 110px;
+        height: 26;
+      }
+    }
+  }
+  .nayt{
+    display: none;
+  }
+  .vlojit{
+    background-color: #0039C7 ;
+    position: fixed;     
+    width: 100vw;   
+    height: 250vh;  
+    margin: -85px 0 0 -140px ;
+    a{
+      text-decoration: none;
+    }
+    .exsis{
+      display: flex;
+      margin: 40px 0 60px 320px ;
+      cursor: pointer;
+    }
+    nav{
+     display: flex;
+     background-color: #ffffff;
+     border-radius: 10px;
+     height: 30px;
+     width: 315px;
+      margin: 20px 0 0 30px ;
+     justify-content: center;
+     cursor: pointer;
+     
+     p{
+      display: flex;
+       justify-content: center;
+       margin-top: 5px;
+       color: #0039C7;
+     }
+     
+
+    }
+  }
+}

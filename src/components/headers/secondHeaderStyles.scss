@@ -1,4 +1,4 @@
-.newsHeadline{
+.newsHeadline {
     text-align: center;
     margin: 70px 0 70px 0;
     font-family: Inter, sans-serif;
@@ -8,4 +8,11 @@
     text-transform: uppercase;
     color: #ffffff;
 
+}
+
+@media (max-width:375px) {
+    .newsHeadline {
+        font-size: 32px;
+        margin: 40px 0 40px 0;
+    }
 }
