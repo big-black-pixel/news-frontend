@@ -95,27 +95,7 @@
   
 }
 
-@media (min-width: 376px) {
-  .perexod{
-    display: none;
-  }
-  .daughterInput{
-    height:27px; 
-    width:34px;
-    border: 1px solid #ffffff;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-
-    img{
-      display: flex;
-      margin: 7px auto;
-      height:13px; 
-      width:13px;
-    }
-  }
-}
-  
-@media  (max-width: 991px) {
+@media (max-width: 991px) {
   .headerss{
     display: flex;
     justify-content: center ;
@@ -184,24 +164,102 @@
     }
     
   }
-  
-  @media (min-width: 376px) {
-    .perexod{
+}
+//  /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 750px) {
+  .headerss{
+    display: flex;
+    justify-content: center ;
+    height: 50px ;
+    margin-top: 38px;
+    min-width: 0; 
+    .logo{
+      height: 45px;
+      width: 170px;
+      img{
+        height: 45px;
+        width: 130px;
+      }
+    }
+    .navig{
       display: none;
     }
+  
+    .buttonsMat{
+      display: flex;
+      min-width: 0; 
+  
+      a{
+        text-decoration: none;
+      }
+        .buttons{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid #ffffff;
+        height: 40px;
+        width: 120px;
+        border-radius: 4px;
+        margin-left:15px;
+  
+        p{
+          color: #ffffff;
+          font-size: 14px;
+        }
+  
+        img{
+          margin-left:10px;
+          height:10px; 
+          width:10px;
+        }
+      }
+    }
+  }
+    
+  .inputClass{
+    display: flex;
+    margin: -9px 0 0 -30px;
+  
+    input{
+      height:38px; 
+      width:260px;
+    
+      padding-left: 10px; 
+      font-size: 14px; 
+    }
+  
     .daughterInput{
-      height:27px; 
-      width:34px;
-      border: 1px solid #ffffff;
-      border-radius: 0px 4px 4px 0px;
-      cursor: pointer;
+      height:40px; 
+      width:35px;
+      border-radius: 0 4px 4px 0;
   
       img{
-        display: flex;
-        margin: 7px auto;
-        height:13px; 
-        width:13px;
+        margin: 15px auto;
+        height:10px; 
+        width:10px;
       }
+    }
+  }
+}
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media (min-width: 376px) {
+  .perexod{
+    display: none;
+  }
+  .daughterInput{
+    height:27px; 
+    width:34px;
+    border: 1px solid #ffffff;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+
+    img{
+      display: flex;
+      margin: 7px auto;
+      height:13px; 
+      width:13px;
     }
   }
 }

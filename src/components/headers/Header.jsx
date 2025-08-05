@@ -8,8 +8,8 @@ function Header() {
   const { inputStatus, setInputStatus, setSecondHeader, statusSecondHeader } = useNews()
   const handleChange = (e) => { setInputStatus(e.target.value); };
   const { navigatoring, setNavigating, inputAcktiv, setInputAcktiv, } = useStatus()
-  const katigories = () =>{setSecondHeader('Категории') ; setNavigating(false)}
-  const izbran = () =>{setSecondHeader('Избранные') ; setNavigating(false)}
+  const katigories = () => { setSecondHeader('Категории'); setNavigating(false) }
+  const izbran = () => { setSecondHeader('Избранные'); setNavigating(false) }
   return (
     <header className="headerss">
       <Link to="/">
@@ -60,7 +60,7 @@ function Header() {
             <img src="img/cubes.svg" alt="Categories" /><p>Категории</p>
           </nav>
         </Link>
-           
+
         <Link to="likes">
           <nav className={(statusSecondHeader === 'Избранные' ? "buttons navColor" : "buttons")} onClick={() => setSecondHeader('Избранные')} >
             <img src="img/heart.svg" alt="Favorites" /><p>Избранные</p>
