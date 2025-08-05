@@ -10,6 +10,15 @@
 
 }
 
+@media (max-width: 991px) {
+    .newsHeadline {
+        margin: 50px 0 50px 0;
+        font-size: 65px;
+        line-height: 10px;
+    
+    }
+}
+
 @media (max-width:375px) {
     .newsHeadline {
         font-size: 32px;

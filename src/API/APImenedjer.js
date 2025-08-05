@@ -16,7 +16,7 @@ export const useNews = create((set)=> ({
                     {
                         q: 'tesla AND (US OR America)',
                         sortBy: 'publishedAt',
-                        language: 'en',
+                        language: 'ru',
                         pageSize: 19,
                         apiKey: '1c4c3b8a0a5f4add894e604d79aa7225'
                     }

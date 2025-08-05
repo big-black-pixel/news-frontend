@@ -9,6 +9,14 @@
 
 }
 
+@media (max-width: 991px) {
+    .like{
+        width: 100%;
+        border-radius: 60px 60px 60px 60px ;
+    }
+    
+}
+
 @media (max-width:375px) {
     .like{
         width: 316px;
